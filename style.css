@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    background: rgb(31, 13, 84);
+    color: white;
+    font-size: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 5% auto;
+  }
+  .container > input{
+    display: none;
+  }
+  .container__slider {
+    overflow: hidden;
+    display: flex;
+    border-radius: 30px;
+  }
+  .slider > .img{
+    width: 100%;
+    position: relative;
+    transition: left 0.3s;
+    left: 0; 
+  }
+  
+  .footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__text-wrapper {
+    width: 50%;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .footer__text-wrapper > p{
+    min-width: 100%;
+    position: relative;
+    left: 0;
+    transition: 0.3s;
+  }
+  
+  .controls{
+    display: flex;
+  }
+  
+  .controls label{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    background: rgb(37, 160, 231);
+    border: 10px solid rgb(23, 157, 234);
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s;
+  }
+  
+  .controls label:hover{
+    background: white;
+    border: 10px solid white;
+  }
+  
+  #slide1:checked ~ .footer > .controls > label:nth-child(1),
+  #slide2:checked ~ .footer > .controls > label:nth-child(2),
+  #slide3:checked ~ .footer > .controls > label:nth-child(3),
+  #slide4:checked ~ .footer > .controls > label:nth-child(4){
+    background: rgb(12, 208, 238);
+    border: 7px solid white;
+  }
+  
+  .controls label:active{
+    border: 10px solid rgb(196, 194, 194);
+    background: rgb(196, 194, 194);
+  }
+  
+  #slide1:checked ~ .slider > .img, #slide1:checked ~ .footer > .footer__text-wrapper > p{
+    left: 0;
+  }
+  
+  #slide2:checked ~ .slider > .img, #slide2:checked ~ .footer > .footer__text-wrapper > p{
+    left: -100%
+  }
+  
+  #slide3:checked ~ .slider > .img, #slide3:checked ~ .footer > .footer__text-wrapper > p{
+    left: -200%
+  }
+  
+  #slide4:checked ~ .slider > .img, #slide4:checked ~ .footer > .footer__text-wrapper > p{
+    left: -300%
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    body{
+      font-size: 2.5rem;
+    }
+  
+    .container{
+      max-width: 90%;
+    }
+  
+    .footer{
+      flex-direction: column;
+    }
+  
+    .controls{
+      margin-top: 30px;
+      justify-content: center;
+    }
+    
+    .footer__text-wrapper{
+      width: 100%;
+    }
+  
+    .footer__text-wrapper > p{
+      text-align: center;
+    }
+  
+    .controls label{
+      width:25px;
+      height: 25px;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 320px) {
+  
+    body{
+      font-size: 1rem;
+    }
+  
+    .footer{
+      flex-direction: column;
+    }
+  
+    .controls{
+      margin-top: 30px;
+      justify-content: center;
+    }
+    
+    .footer__text-wrapper{
+      width: 100%;
+    }
+  
+    .footer__text-wrapper > p{
+      text-align: center;
+    }
+  
+    .controls label{
+      width: 20px;
+      height: 20px;
+    }
+  
+  }
