@@ -92,6 +92,6 @@
     left: -200%
   }
   
-  #slide4:checked ~ .slider > .img, #fourth:checked ~ .footer > .footer__text-wrapper > p{
+  #slide4:checked ~ .slider > .img, #slide4:checked ~ .footer > .footer__text-wrapper > p{
     left: -300%
   }
