@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>cssMemSlider</title>
 </head>
 <body>
-    
+    <div class="container">
+        <input id="first" type="radio" name="radio" checked>
+        <input id="second" type="radio" name="radio">
+        <input id="third" type="radio" name="radio">
+        <input id="fourth" type="radio" name="radio">
+        <div class="container__slider slider">
+          <img class="img" src="assets/1.jpeg" alt="cat">
+          <img class="img" src="assets/2.png" alt="man">
+          <img class="img" src="assets/3.png" alt="child">
+          <img class="img" src="assets/4.png" alt="portfolio">
+        </div>
+        <div class="container__footer footer">
+          <div class="footer__text-wrapper text-wrapper">
+            <p class="slide-1">Проблема не на нашей стороне.</p>
+            <p class="slide-2">Now you look like a back end developer. (Теперь ты выглядишь как Back-End разработчик).</p>
+            <p class="slide-3">Hold my beer. I'm going to learn new javascript framework (Подержи мое пиво. Я собираюсь изучить новый фреймворк javascript).</p>
+            <p class="slide-4">Представляете каким великолепным будет ваше портфолио.</p>
+          </div>
+          <div class="footer__controls controls">
+            <label for="first"></label>
+            <label for="second"></label>
+            <label for="third"></label>
+            <label for="fourth"></label>
+          </div>
+        </div>
+      </div>    
 </body>
 </html>
