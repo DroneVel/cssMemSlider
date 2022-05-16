@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    background: rgb(31, 13, 84);
+    color: white;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 5% auto;
+  }
+  .container > input{
+    display: none;
+  }
+  .container__slider {
+    overflow: hidden;
+    display: flex;
+    border-radius: 30px;
+  }
+  .slider > .img{
+    width: 100%;
+    position: relative;
+    transition: left 0.5s;
+    left: 0; 
+  }
+  
+  .footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__text-wrapper {
+    width: 50%;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .footer__text-wrapper > p{
+    min-width: 100%;
+    position: relative;
+    left: 0;
+    transition: 0.3s;
+  }
+  
+  .controls{
+    display: flex;
+  }
+  
+  .controls label{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background: transparent;
+    background: rgb(37, 160, 231);
+    border: 3px solid rgb(23, 157, 234);
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s;
+  }
+  
+  .controls label:hover{
+    background: white;
+    border: 3px solid white;
+  }
+  
+  #slide1:checked ~ .footer > .controls > label:nth-child(1),
+  #slide2:checked ~ .footer > .controls > label:nth-child(2),
+  #slide3:checked ~ .footer > .controls > label:nth-child(3),
+  #slide4:checked ~ .footer > .controls > label:nth-child(4){
+    background: transparent;
+    border: 3px solid white;
+  }
+  
+  .controls label:active{
+    border: 3px solid rgb(196, 194, 194);
+    background: rgb(196, 194, 194);
+  }
+  
+  #slide1:checked ~ .slider > .img, #slide1:checked ~ .footer > .footer__text-wrapper > p{
+    left: 0;
+  }
+  
+  #slide2:checked ~ .slider > .img, #slide2:checked ~ .footer > .footer__text-wrapper > p{
+    left: -100%
+  }
+  
+  #slide3:checked ~ .slider > .img, #slide3:checked ~ .footer > .footer__text-wrapper > p{
+    left: -200%
+  }
+  
+  #slide4:checked ~ .slider > .img, #fourth:checked ~ .footer > .footer__text-wrapper > p{
+    left: -300%
+  }
